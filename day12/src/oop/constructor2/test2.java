@@ -8,6 +8,8 @@ public class test2 {
 		GameData b = new GameData("크롱", "마법사",35,20000);
 		GameData c = new GameData("루피", "전사");
 		
+		
+	
 		a.result();
 		b.result();
 		c.result();

@@ -2,17 +2,19 @@ package oop.constructor2;
 
 public class GameData {
 
-	private String ID;
+	private final String ID; //final은 최초 한번만 값을 지정하고 잠그기 때문에 set메소드를 또 생성은 불가함 set가 ID란 값을 바꾸기 위해 존재하는 메소드이기 때문에
 	private String job;
-	private int level=1;
-	private int gold=0;
+	private int level;
+	private int gold;
 	
 	GameData(String ID,String job){
-		this.setID(ID);
+		this.ID=ID;
 		this.setJob(job);
+		this.setLevel(1);
+		this.setGold(0);
 		}
 	GameData(String ID,String job, int level, int gold){
-		this.setID(ID);
+		this.ID=ID;
 		this.setJob(job);
 		this.setLevel(level);
 		this.setGold(gold);
@@ -21,10 +23,10 @@ public class GameData {
 		return ID;
 	}
 
-	public void setID(String iD) {
-		ID = iD;
+	/*public void setID(String iD) {
+		  this.ID = iD;
 	}
-
+*/
 	public String getJob() {
 		return job;
 	}
