@@ -23,8 +23,7 @@ public abstract class Phone {//스마트폰의 공통 기능 클래스(조상 �
 	public void setNumber(int number) {
 		this.number = number;
 	}
-
-
+	
 	public abstract void call();
 	public abstract void sms();
 	public abstract void setColor() ;
@@ -32,5 +31,6 @@ public abstract class Phone {//스마트폰의 공통 기능 클래스(조상 �
 	public void nonColor() {
 		this.color=null;
 		System.out.println("잘못된 색상입니다.");
+		
 	}
 }
