@@ -10,7 +10,7 @@ public class test11 {
 		//http://www.regexper.com  사이트 참조해서 사용하면 매우 편하다.
 		
 		String id= "@@@khs-_tudent1234";
-		String regex="^[a-z0-9-_]{5,20}$";//개쩐다 ㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+		String regex="^[a-z0-9-_]{5,20}$";
 		
 		if(Pattern.matches(regex, id)) {
 			
