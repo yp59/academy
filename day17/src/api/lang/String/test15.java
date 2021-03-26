@@ -8,7 +8,8 @@ public class test15 {
 		// TODO Auto-generated method stub
 		
 		String number = "010-4224-4840";
-		String regex ="^[0-9]{3}[-][0-9]{4}[-][0-9]{4}$";
+//		String regex ="^[0-9]{3}[-][0-9]{4}[-][0-9]{4}$"; 이전 식
+		String regex ="^010-[1-9][0-9]{3}[-][0-9]{4}$";//() | 쓰면 (|) 둘중에 하나?
 		
 		if(Pattern.matches(regex, number)) {
 			System.out.println("good");

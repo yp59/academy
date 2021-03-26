@@ -8,8 +8,9 @@ public class test13 {
 		// TODO Auto-generated method stub
 		String address ="123456";
 		String regex = "^[0-9]{5,6}$";
-		
-		if(Pattern.matches(regex, address)) {
+		String regex2 = "^([0-9]{5}|[0-9]{6})$";//괄호안 둘 중 하나 가능
+		String regex3 = "^\\d{5,6}$"; //\\d는 모든 숫자와 같음 즉[0-9] = \\d
+		if(Pattern.matches(regex3, address)) {
 			
 			System.out.println("good");
 			

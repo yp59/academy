@@ -10,7 +10,7 @@ public class test14 {
 		String name = "장미꽃이";
 		
 		String regex = String.format("^[가-힣]{2,%d}$", name.length());
-		
+		String regex2 = "^[가-힣]{2,%d}$";
 		System.out.println(Pattern.matches(regex, name));
 	}
 
