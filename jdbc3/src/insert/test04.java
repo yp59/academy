@@ -1,4 +1,4 @@
-package jdbc3;
+package insert;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
