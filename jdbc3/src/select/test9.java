@@ -13,8 +13,7 @@ public class test9 {
 		Scanner in = new Scanner(System.in);
 		
 		int no = in.nextInt();
-		
-		
+
 		Class.forName("oracle.jdbc.OracleDriver");
 		
 		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "study", "study");

@@ -10,8 +10,8 @@ public class test2 {
 		// TODO Auto-generated method stub
 		//academy 테이블의 데이터 수정
 		//준비물 : 번호 , 이름
-		int no=1;
-		int price = 2000;
+		int no=3;
+		int price = 3000;
 		
 		
 		Class.forName("oracle.jdbc.OracleDriver");

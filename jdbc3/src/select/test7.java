@@ -23,7 +23,8 @@ public class test7 {
 		
 		//String sql="select * from product where #1= ?";
 		//sql=sql.replace("#1",type); 2가지 방법
-
+		//동적sql이 데이터를 보호하기 좋지만 column은 ''를 넣지 않으므로 정적 sql과 합쳐서 사용한다.
+		
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, keyword);
 		

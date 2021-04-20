@@ -22,7 +22,7 @@ public class test3 {
 		ps.setInt(1, point);
 		ps.setString(2,id);
 
-		int count =ps.executeUpdate();
+		int count =ps.executeUpdate();//excuteupdate는 수정된 행의 갯수를 int로 나타낸다.
 			
 		if(count>0) {
 			System.out.println("증정 포인트 : " +point);
@@ -32,7 +32,7 @@ public class test3 {
 			ps.setString(1, id);
 			ResultSet rs = ps.executeQuery();
 			
-			while(rs.next()) {
+			while(rs.next()) {//data가 있으면 한행씩 get으로 column을 찍어서 java에서 불러온다.
 				System.out.print(rs.getInt("member_no")+"/");
 				System.out.print(rs.getString("member_id")+"/");
 				System.out.print(rs.getInt("member_point"));

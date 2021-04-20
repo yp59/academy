@@ -20,18 +20,18 @@ public class test2 {
 		
 		String sql = "select * from product order by no asc";
 		PreparedStatement ps = con.prepareStatement(sql);
-		
+
 		ResultSet rs = ps.executeQuery();// 실행 후 결과집합에 접근할 수 있도록 참조(rs) 제공
 
 		
-		while(rs.next()) {//rs.next는 DB에 데이터가 있을 경우 true를 return한다.
+		while(rs.next()) {//rs.next는 DB에 데이터가 있을 경우 true를 return한다. 행으로 보고 차례대로 뽑아준다.
 			
 			System.out.print(rs.getInt("NO")+" ");//java에서 보는거면 DB입장 고려하지말고 JAVA에서 보자
 			System.out.print(rs.getString("NAME")+" ");
 			System.out.print(rs.getString("TYPE")+" ");
 			System.out.print(rs.getInt("PRICE")+" ");
-			System.out.print(rs.getString("MADE")+" ");
-			System.out.println(rs.getString("EXPIRE")+" ");
+			System.out.print(rs.getDate("MADE")+" ");
+			System.out.println(rs.getDate("EXPIRE")+" ");
 
 			
 			

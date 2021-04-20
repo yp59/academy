@@ -17,10 +17,7 @@ public class test3_1 {
 		
 		Connection con = DriverManager.getConnection(
 				"jdbc:oracle:thin:@localhost:1521:xe", "study", "study");
-	
-		
-		
-	
+
 	try {	
 	String sql ="insert into character values"
 			+ "(character_seq.nextval,?,?,?)";

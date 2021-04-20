@@ -15,14 +15,11 @@ public class test01 {
 				"study","study");
 		System.out.println("DB연결완료");
 		
-		//	Connection con = DriverManeger.getConnection(
-		//	"jdbc.oracle:thin:@localhost:1521:xe","study","study");
-		
 		String sql = "insert into menu values(menu_seq.nextval,'아메리카노',1200)";
 		
 		PreparedStatement ps = con.prepareStatement(sql);
 		
-		ps.execute();
+		ps.execute();//보내는 명령어?
 		
 		con.close();
 		System.out.println("DB종료");

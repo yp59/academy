@@ -15,7 +15,7 @@ public class test5 {
 		String product_name = in.next();
 		
 		//product_name=product_name.substring(0, 1);
-		
+		//instr 으로 검색해도 된다. subString쓰면 오히려 안좋음
 		System.out.println(product_name);
 		Class.forName("oracle.jdbc.OracleDriver");
 		

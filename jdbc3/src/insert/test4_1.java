@@ -40,6 +40,7 @@ public class test4_1 {
 			//아이디가 중복인지 닉네임이 중복인지 모른다.
 			System.out.println("이미 사용중인 아이디입니다.");
 			System.out.println("이미 사용중인 닉네임입니다.");
+			
 		}
 	}
 

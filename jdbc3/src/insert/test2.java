@@ -18,14 +18,9 @@ public class test2 {
 				"study","study");
 		System.out.println("DB연결완료");
 		
-		//	Connection con = DriverManeger.getConnection(
-		//	"jdbc.oracle:thin:@localhost:1521:xe","study","study");
 		
 		String sql = "insert into menu values(menu_seq.nextval,"+menuName+","+menuPrice+")";
 		
-		/*String sql = "insert into menu values(menu_seq.nextval,'#1','#2')";
-		sql = sql.replace("#1", menuName);
-		sql = sql.replace("#2", String.valueOf(menuPrice));*/
 		PreparedStatement ps = con.prepareStatement(sql);
 		
 		ps.execute();

@@ -28,8 +28,6 @@ public class test01 {
 			
 			System.out.print(rs.getInt("academy_no"));//java에서 보는거면 DB입장 고려하지말고 JAVA에서 보자
 			System.out.print(" ");
-			System.out.print(rs.getString("academy_no"));
-			System.out.print(" ");
 			System.out.println(rs.getString("academy_name"));
 			
 		}

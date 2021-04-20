@@ -32,6 +32,7 @@ public class test2_3 {
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, menuName);//1번째 위치홀더에 menuName을 String 형태로 연결(따옴표 생성)
 		ps.setInt(2, menuPrice);//2번째 위치 홀더에 menuPrice를 int형태로 연결(따옴표 생성안함)
+		//동적 sql로 구성함으로써 값을 노출 시키지 않을 수 있다.
 		
 		ps.execute();
 		con.close();

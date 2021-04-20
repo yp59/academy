@@ -10,6 +10,7 @@ public class test6 {
 
 	public static void main(String[] args)throws Exception {
 		// TODO Auto-generated method stub
+		//집계함수 max min avg sum >하나 더 뭐였더라
 		Scanner in = new Scanner(System.in);
 		
 		int min_price = in.nextInt();

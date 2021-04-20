@@ -24,7 +24,7 @@ public class test8 {
 		PreparedStatement ps = con.prepareStatement(sql);
 		
 		ps.setInt(1, academy_no);
-		ResultSet rs = ps.executeQuery();
+		ResultSet rs = ps.executeQuery();//해당하는 조회값만 커서를 옮겨준다.
 		
 		if(rs.next()) {
 			System.out.println("데이터발견");

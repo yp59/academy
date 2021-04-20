@@ -1,6 +1,7 @@
 package Module;
 
 import beans.MemberDao;
+import beans.MemberDto;
 
 public class testupdate {
 
@@ -11,7 +12,13 @@ public class testupdate {
 		int point = 45;
 		
 		MemberDao memberdao = new MemberDao();
-		int count = memberdao.givePoint(id, point);
+		MemberDto memberDto = new MemberDto();
+		
+		memberDto.setMember_id(id);
+		memberDto.setMember_point(point);
+		
+		//int count = memberdao.givePoint(id, point);
+		int count = memberdao.givePoint(memberDto);
 		
 		if(count>0) System.out.println("point증가 : "+point);
 		

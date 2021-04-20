@@ -24,7 +24,7 @@ public class test1 {
 		ps.setString(1, academy_name);
 		ps.setInt(2, academy_no);
 		//ps.execute();
-		int count = ps.executeUpdate();//실행을 한뒤 적용된 행 수를 반환
+		int count = ps.executeUpdate();//실행을 한뒤 적용된 행 수를 반환 update delete에서 사용?
 		
 		con.close();
 		
