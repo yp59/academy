@@ -126,4 +126,30 @@ public class ProductDao {
 		return productlist;
 		
 	}
+	
+	public ProductDto get(int productNo)throws Exception{
+		
+		Connection con = JdbcUtils.getConnection(USERNAME, PASSWORD);
+		
+		String sql ="select * from product where no =?";
+		
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, productNo);
+		
+		ResultSet rs = ps.executeQuery();
+		
+		ProductDto productDto;
+		if(rs.next()) {
+			productDto = new ProductDto();
+			productDto.setNo(rs.getInt("No"));
+			productDto.setName(rs.getString("name"));
+			productDto.setPrice(rs.getInt("price"));
+		}
+		else {
+			productDto = null;
+		}
+		con.close();
+		
+		return productDto;
+	}
 }

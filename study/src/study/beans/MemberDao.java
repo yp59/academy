@@ -12,6 +12,8 @@ import java.util.List;
 
 public class MemberDao {
 
+	public static final String USERNAME ="study";
+	public static final String PASSWORD ="study";
 	//필요한 데이터베이스 작업들을 메소드로 구현
 	
 	//회원 탈퇴 메소드
@@ -301,6 +303,29 @@ Class.forName("oracle.jdbc.OracleDriver");
 		
 		con.close();
 		
+		return memberDto;
+	}
+	
+	public MemberDto login(String id , String pw)throws Exception{
+		Connection con =JdbcUtils.getConnection(USERNAME, PASSWORD);
+		String sql = "select * from"
+				+ " member where member_id=? and member_pw=?";
+		
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ps.setString(1, id);
+		ps.setString(2, pw);
+		
+		ResultSet rs = ps.executeQuery();
+		MemberDto memberDto ;
+		if(rs.next()) {
+			memberDto = new MemberDto();
+			memberDto.setMember_nick(rs.getString("member_nick"));		
+		}
+		else
+			memberDto=null;
+		
+		con.close();
 		return memberDto;
 	}
 }
