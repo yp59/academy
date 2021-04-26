@@ -17,7 +17,7 @@ import study.beans.QuizDto;
 
 @WebServlet(urlPatterns = "/quiz/insert.kh")
 public class QuizInsertServlet extends HttpServlet{
-	@Override
+	//@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 //			준비
