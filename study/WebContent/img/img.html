@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>img 태그</title>
+</head>
+<body>
+	<!-- 	
+		img 태그에 대한 설명
+		- 일회성 태그이므로 종료태그가 필요하지 않다 
+		- 태그만으로는 이미지 정보나 기타 속성등을 설정할 수 없다
+		- 속성(attribute)을 이용하여 이미지의 옵션을 설정한다
+			- src : 이미지의 경로(잘못된 경로일 경우 이미지가 표시되지 않는다)
+				- (주의) : 반드시 http 또는 https로 시작하는 주소여야 한다(웹에서 접근이 가능해야 한다)
+				- (주의) : 내가 가진 이미지의 경로는 줄여서 사용 가능
+					- 프로토콜 생략 가능
+					- 호스트 생략 가능
+					- 프로젝트(context path) 생략 불가
+				- 절대경로(absolute path) : 절대로 변하지 않는 유일한 경로(full 주소)
+				- 상대경로(relative path) : 현재 위치를 기준으로 산정한 경로
+			- width : 폭(px)
+			- height : 높이(px)
+	-->
+	<img src="https://image.edaily.co.kr/images/Photo/files/NP/S/2015/08/PS15081300024.jpg" 
+				width="200" height="300" alt="뽀로로 사진">
+	
+	<br><br>
+	
+	<img src="http://localhost:8080/study/image/any.jpg" width="300" height="200" alt="메뉴판">			
+	
+	<br><br>
+	
+	<img src="//localhost:8080/study/image/any.jpg" width="300" height="200" alt="메뉴판">
+	
+	<br><br>
+	
+	<img src="/study/image/any.jpg" width="300" height="200" alt="메뉴판">
+	
+	<br><br>
+	
+	<!-- 다음 이미지는 출력되지 않는다(경로 잘못됨) -->
+	<img src="/image/any.jpg" width="300" height="200" alt="메뉴판">
+	
+	<br><br>
+	
+	<img src="../image/any.jpg" width="300" height="200" alt="메뉴판">
+	 
+</body>
+</html>

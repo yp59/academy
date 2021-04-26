@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력창 만들기</title>
+</head>
+<body>
+<!-- 
+입력 태그 : 사용자가 원하는 값을 여러 형태로 엽력할 수 있도록 제공되는 태그
+insert : 한줄 입력이 가능한 일회성 태그
+	-type :입력창의 형태 (기본 text)
+	-value :입력된 값을 설정할 수 있는 속성
+	-placeholder : 값이 입력되지 않았을 경우 입력창에 표시할 도움말
+select : option 태그와같이 쓰는 태그
+textarea : value가 없다.
+
+ -->
+text : <input type="text" placeholder="예 : 홍길동"size="50"maxlength="5"><br><br>
+button : <input type="button"value="눌러보세요"><br><br>
+checkbox : <input type="checkbox">동의합니다.<br><br>
+<!-- color : <input type="color"><br><br>인터넷 브라우저에 따라 나오는거도 있고 안나오는 것도 있다. 따라서 안함 -->
+date : <input type="date"placeholder="YYYY-MM-DD"><br><br>
+datetime-local : <input type="datetime-local"><br><br>
+<!-- datetime : <input type="datetime"><br><br> -->
+<!-- email : <input type="email"><br><br> -->
+file : <input type="file"><br><br>
+hiddem : <input type="hidden"><br><br>
+image : <input type="image"src="http://localhost:8080/study/aaa.png"><br><br><!-- 이미지 형태를 가장한 버튼 -->
+<!-- month : <input type="month"><br><br> -->
+number : <input type="number"min="0"step="100"><br><br>
+password : <input type="password"placeholder="비밀번호입력"><br><br>
+radio : 1번<input type="radio"name="rd">
+		2번<input type="radio"name="rd"checked="checked">
+		3번<input type="radio"name="rd"><br><br>
+range : <input type="range"min="0"max="100"step="10"><br><br>
+<!-- reset : <input type="reset"><br><br> -->
+search : <input type="search"><br><br>
+<!-- submit : <input type="submit"><br><br> -->
+<!-- tel : <input type="tel"><br><br> -->
+time : <input type="time"><br><br>
+<!-- url : <input type="url"><br><br> -->
+<!-- week : <input type="week"><br><br> -->
+
+select-box : 
+<select>
+<option>첫번째</option>
+
+<option>두번째</option>
+<option>세번째</option>
+
+
+</select>
+<br><br>
+textrea : <textarea rows="5" cols="3"></textarea>
+</body>
+</html>
