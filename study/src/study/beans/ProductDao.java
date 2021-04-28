@@ -75,9 +75,9 @@ public class ProductDao {
 		Connection con = JdbcUtils.getConnection(USERNAME, PASSWORD);
 	
 		List<ProductDto> productlist = new ArrayList();
-		String sql = "select rownum, TMP.* from "
-				+"(select * from product order by price desc) TMP "
-				+"where rownum between ? and ?";
+		String sql = "select * from(select rownum rn, TMP.* from "
+				+"(select * from product order by price desc) TMP) "
+				+"where rn between ? and ?";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setInt(1, top);
 		ps.setInt(2, low);
@@ -151,5 +151,29 @@ public class ProductDao {
 		con.close();
 		
 		return productDto;
+		
+		
 	}
+	public boolean productDelete(int productNo)throws Exception{
+		Connection con = JdbcUtils.getConnection(USERNAME, PASSWORD);
+		
+		String sql = "delete from product "
+				+ "where no=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, productNo);
+		
+		int count=ps.executeUpdate();
+		
+		boolean ssucess;
+		
+		if(count>0) {
+			ssucess=true;
+		}
+		else
+			ssucess=false;
+	
+		return ssucess;
+	}
+	
+	
 }

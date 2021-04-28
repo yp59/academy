@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상품 등록</title>
+</head>
+<body>
+	<h1>상품 정보 입력</h1>
+	
+	<!-- 
+		form에서 반드시 입력되어야 하는 입력창에는 required 옵션을 부여한다.
+		
+		- 정식으로는 required="required"라고 작성해야 하지만 다른 값이 없으므로 이름만 작성이 가능
+		- required, checked, readonly, disabled, selected 등
+		
+		- select의 경우는 value="" 인 경우 required라면 전송이 불가하므로 선택하세요 옵션을 만들 때 사용
+	 -->
+	
+	<form action="/study/product/insert.kh">
+	
+		이름 : <input type="text" name="name" required><br><br>
+		유형 : 
+		<select name="type" required>
+			<option value="">선택하세요</option>
+			<option>과자</option>
+			<option>아이스크림</option>
+			<option>주류</option>
+			<option>사탕</option>
+		</select>
+		<br><br>
+		
+		가격 : <input type="number" name="price" required><br><br>
+		제조일 : <input type="date" name="made" required><br><br>
+		유통기한 : <input type="date" name="expire" required><br><br>
+	
+		<input type="submit" value="등록">
+		<input type="reset" value="초기화">
+		
+	</form>
+</body>
+</html>

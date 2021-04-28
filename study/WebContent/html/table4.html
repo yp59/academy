@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>셀 병합</title>
+</head>
+<body>
+<!-- 
+테이블 바디만 있는 경우 tbody생략가능
+
+colspan : 늘린 뒤 자리할 칸수
+rowspan : 늘린 뒤 자리할 줄수
+ -->
+ 
+<table border="1" width="400" >
+<h1>오늘의 날씨</h1>
+<thead>
+	<tr align="center" height="20">
+		<td>지역</td>
+		<td>현재기온</td>
+		<th colspan="2">불쾌지수/습도(%)</th>
+		<td>풍속</td>
+	</tr>
+</thead>
+<tbody>
+	<tr align="center">
+		<th rowspan="2">서울/경기</th>
+		<td>23</td>
+		<td>60</td>
+		<td>80</td>
+		<td>4.7</td>
+	</tr>
+	
+	<tr align="center">
+		<td>20</td>
+		<td>60</td>
+		<td>80</td>
+		<td>5.0</td>
+	</tr>
+	<tr align="center">
+		<td>제주도</td>
+		<td>21</td>
+		<td>65</td>
+		<td>85</td>
+		<td>3.6</td>
+	</tr>	
+</tbody>
+</table>
+</body>
+</html>

@@ -165,6 +165,8 @@ Class.forName("oracle.jdbc.OracleDriver");
 				con.close();
 			}
 	
+	
+	
 /*	public List<MemberDto> selectList()throws Exception{
 		Class.forName("oracle.jdbc.OracleDriver");
 		

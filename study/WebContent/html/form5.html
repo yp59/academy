@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상품 넣기</title>
+</head>
+<body>
+
+<form action="http://localhost:8080/study/product/insert.kh">
+<input type="text"name="name"placeholder="name"> 
+<!-- <input type="text"name="type"placeholder="type">  -->
+
+<select name="type" required>
+	<option value="">선택하세요</option>
+	<option>과자</option>
+	<option>아이스크림</option>
+	<option>주류</option>
+	<option>사탕</option>
+</select>
+<input type="text"name="price"placeholder="price"> 
+<input type="date"name="expire"> 
+<input type="submit"value="입력"> 
+</form>
+
+</body>
+</html>
