@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"href="/study/design/common.css">
+<style>
+/*.img-circle:이미지를 원형으로 표시
+
+*/
+	.image {
+		
+		}
+		.image.image-circle {
+			border-radius: 50%;
+		}
+		.image.image-frame {
+			border: 2px solid gray;
+		}
+		.image.image-shadow {
+			/* box-shadow : X위치 Y위치 번짐정도 퍼짐정도 색상; */
+			box-shadow: 0px 0px 4px 4px gray;
+		}
+		.image.image-blur {
+			/* opacity가 1이면 선명 , 0이면 투명 */
+			opacity:0.5;
+		}
+		/* class="image-blur" 인 항목에 마우스가 올라가면(hover) : 상태선택자 */
+		.image.image-blur:hover {
+			opacity: 1;
+		}
+		
+		.image.image-leaf {
+			border-top-left-radius: 50%;
+			border-bottom-right-radius: 50%;
+		}
+</style>
+
+
+</head>
+<body>
+<img class="image image-circle" src="/study/apple.jpg" width="200" height="200">
+<img class="image image-frame" src="/study/apple.jpg" width="200" height="200">
+<img class="image image-circle img-frame" src="/study/apple.jpg" width="200" height="200">
+<img class="image imgge-shadow" src="/study/apple.jpg" width="200" height="200">
+<img class="image image-blur" src="/study/apple.jpg" width="200" height="200">
+<img class="image image-circle image-frame image-blur" src="/study/apple.jpg" width="200" height="200">
+<img class="image image-leaf" src="/study/apple.jpg" width="200" height="200">
+<img  src="/study/apple.jpg" width="200" height="200">
+</body>
+</html>

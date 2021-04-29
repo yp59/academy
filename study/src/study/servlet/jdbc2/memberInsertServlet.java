@@ -17,9 +17,11 @@ public class memberInsertServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	
-	try {
+		//post방식으로 전송되는 데이터는 유니코드가 깨져서 전송되므로 복원코드가 필요하다
+		//get방식에서도 오류는 나지 않기 때문에 무조건 쓴다.
+		
+	try {	req.setCharacterEncoding("UTF-8");
 		MemberDto memberDto = new MemberDto();
-		req.setCharacterEncoding("UTF-8");
 		memberDto.setMember_id(req.getParameter("memberId"));
 		memberDto.setMember_pw(req.getParameter("memberPw"));
 		memberDto.setMember_nick(req.getParameter("memberNick"));

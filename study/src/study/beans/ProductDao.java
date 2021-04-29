@@ -172,6 +172,7 @@ public class ProductDao {
 		else
 			ssucess=false;
 	
+		con.close();
 		return ssucess;
 	}
 	

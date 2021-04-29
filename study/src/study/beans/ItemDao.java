@@ -25,6 +25,19 @@ public class ItemDao {
 		con.close();
 	}
 	
+	
+	public void insert2(ItemDto itemDto) throws Exception {
+		Connection con = JdbcUtils.getConnection(USERNAME, PASSWORD);
+		
+		String sql = "insert into item values(?, ?, ?)";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, itemDto.getItemNo());
+		ps.setString(2, itemDto.getItemName());
+		ps.setInt(3, itemDto.getItemPrice());
+		ps.execute();
+		
+		con.close();
+	}
 	public List<ItemDto> list()throws Exception{
 		Connection con = JdbcUtils.getConnection(USERNAME, PASSWORD);
 		
@@ -112,5 +125,18 @@ public class ItemDao {
 		
 		return count > 0;
 	}
-	
+	public int sequence() throws Exception{
+		Connection con = JdbcUtils.getConnection(USERNAME, PASSWORD);
+		
+		String sql = "select item_seq.nextval from dual";
+		PreparedStatement ps =con.prepareStatement(sql);
+		
+		ResultSet rs = ps.executeQuery();
+		
+		rs.next();
+		int i = rs.getInt(1);
+		
+		con.close();
+		return i;
+	}
 }

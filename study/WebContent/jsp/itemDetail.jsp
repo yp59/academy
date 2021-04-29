@@ -24,6 +24,9 @@
 <h1>이름 : <%=itemDto.getItemName() %></h1>
 <h1>가격 : <%=itemDto.getItemPrice() %></h1>
 
+
+<h3><a href="/study/jsp/ItemEdit.jsp?itemNo=<%=itemNo%>">아이템 수정하기(절대경로)</a></h3>
+<h3><a href="ItemEdit.jsp?itemNo=<%=itemNo%>">아이템 수정하기(상대경로)</a></h3>
 <h3><a href="itemDelete.kh?itemNo=<%=itemDto.getItemNo()%>">상품 삭제하기</a></h3>
 </body>
 </html>

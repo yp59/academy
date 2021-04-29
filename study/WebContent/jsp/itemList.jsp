@@ -12,6 +12,9 @@
 <h4><a href="/study/jsp/itemInsert.jsp">아이템 등록(절대경로)</a></h4>
 <h4><a href="itemInsert.jsp">아이템 등록(상대경로)</a></h4>
 
+<h4><a href="/study/jsp/itemInsert2.jsp">아이템 등록2(절대경로)</a></h4>
+<h4><a href="itemInsert2.jsp">아이템 등록2(상대경로)</a></h4>
+
 <table border="1">
 	<thead>
 		<tr>
