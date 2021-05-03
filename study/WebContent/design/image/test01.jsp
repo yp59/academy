@@ -7,9 +7,17 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"href="/study/design/common.css">
 <style>
-/*.img-circle:이미지를 원형으로 표시
-
-*/
+/*
+			공용 스타일
+			- .image
+		
+			확장 스타일
+			- .image-circle : 이미지를 원형으로 표시
+			- .image-frame : 이미지에 액자처럼 테두리 표시
+			- .image-shadow : 이미지에 그림자를 표시
+			- .image-blur : 이미지를 뿌옇게 표시(단, 마우스가 올라가면 선명하게 표시)
+			- .image-leaf : 이미지를 나뭇잎 모양으로 표시
+		*/
 	.image {
 		
 		}

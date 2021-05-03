@@ -14,6 +14,7 @@
 			- 폭 설정 기준(box-sizing)
 		*/
 		.naver-login {
+			border:1px solid;
 			width:400px;
 			font-family: sans-serif;
 			

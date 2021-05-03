@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>css</title>
 <style>
-h1{
+.dd{
 color:red;
 }
 </style>

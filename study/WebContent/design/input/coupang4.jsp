@@ -50,7 +50,7 @@
 	.container-600, .container-700, .container-800, .container-900, .container-1000,
 	.container-1100, .container-1200, .container-1300, .container-1400, .container-1500 {
 		margin-left:auto;
-		margin-right:auto;
+		margin-right:auto;/*margin left right auto로 두면 가운데로 자동 정렬된다??*/
 	}
 	.container-left {
 		margin-left:0px;
@@ -66,7 +66,7 @@
 	}
 	
 	/*
-		영역 내부에 줄을 배치하여 원하는 도구들을 위치시키도록 구현
+		영역 내부에 줄을 배치하여 원하는 도구들을 위치시키도록 구현 강제 구역 나누기???20px로???
 	*/
 	.row {
 		width:100%;

@@ -16,9 +16,9 @@ background-color: yellow;
 color:green;
 }
 
-
-h1[class=test]{
-color:blue;
+.test{
+text-align:center;
+color:gray;
 }
 </style>
 
