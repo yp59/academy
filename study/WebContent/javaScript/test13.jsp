@@ -10,7 +10,7 @@
 			var regex = /^[가-힣]{2,10}$/;
 			
 			var nicknameInput = document.querySelector(".user-input");
-			console.log(nicknameInput);
+// 			console.log(nicknameInput);
 			
 			nicknameInput.classList.remove("correct", "incorrect");
 			if(regex.test(nicknameInput.value)){

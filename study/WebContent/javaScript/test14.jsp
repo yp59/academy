@@ -10,16 +10,21 @@
 			var regex = /^[가-힣]{2,10}$/;
 			
 			var nicknameInput = document.querySelector("input[name=memberNick]");
-			console.log(nicknameInput);
-			
+// 			console.log(nicknameInput);
 			nicknameInput.classList.remove("correct", "incorrect");
-			if(regex.test(nicknameInput.value)){
-				//correct라는 클래스를 부여
-				nicknameInput.classList.add("correct");
-			}
-			else{
-				//incorrect라는 클래스를 부여
-				nicknameInput.classList.add("incorrect");
+// 			입력창에 값이 없는 경우는 비어있는 문자열로 보면 된다.
+//				= 자바스크립트는 부정적인 값을 false와 같다고 본다(0, "", null, ...)
+// 			if(nicknameInput.value != ""){//입력값이 빈 문자열이 아니라면(=입력값이 있다면)
+// 			if(nicknameInput.value.length > 0){//입력값의 글자수가 0보다 크다면
+			if(nicknameInput.value){//입력값이 긍정적인 값이라면
+				if(regex.test(nicknameInput.value)){
+					//correct라는 클래스를 부여
+					nicknameInput.classList.add("correct");
+				}
+				else{
+					//incorrect라는 클래스를 부여
+					nicknameInput.classList.add("incorrect");
+				}	
 			}
 		}
 	</script>
