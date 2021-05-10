@@ -29,10 +29,10 @@
 			<!-- 메뉴 -->
 			<ul class="menu">
 				<li>
-					<a href="#">메뉴1</a>
+					<a href="#">상품 관리</a>
 					<ul>
-						<li><a href="#">서브1</a></li>
-						<li><a href="#">서브2</a></li>
+						<li><a href="<%=root%>/product/productInsert.jsp">상품 등록</a></li>
+						<li><a href="<%=root%>/product/productList.jsp">상폼 목록</a></li>
 						<li><a href="#">서브3</a></li>
 						<li><a href="#">서브4</a></li>
 					</ul>
@@ -40,7 +40,7 @@
 				<li>
 					<a href="#">아이템 관리</a>
 					<ul>
-						<li><a href="#">아이템 등록</a></li>
+						<li><a href="<%=root%>/item/itemInsert.jsp">아이템 등록</a></li>
 						<li><a href="<%=root%>/item/itemList.jsp">아이템 목록</a></li>
 						<li><a href="item/itemList.jsp">아이템 목록</a></li>
 						<li><a href="#">서브4</a></li>

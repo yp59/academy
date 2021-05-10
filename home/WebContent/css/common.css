@@ -1,5 +1,26 @@
 @charset "UTF-8";
 
+/* 
+	선택자(selector) : 디자인을 적용시킬 대상을 선택하기 위한 문법 
+	
+	태그 선택자 : 태그명을 이용하여 페이지 내의 모든 대상을 선택하는 방법(매우 위험)
+	상태 선택자 : 대상을 특정하기 위해 상태를 이용하여 선택하는 방법
+		ex) h1:first-child , h1:last-child , h1:nth-child(1), h1:hover, h1:focus 등
+	속성 선택자 : 태그의 속성을 이용하여 선택하는 방법
+		ex) h1[id=target] , input[name=memberId], 등
+	아이디 선택자 : 
+		- 모든 태그에는 id라는 속성을 부여할 수 있으며, id는 페이지 내에서 유일해야 한다.
+		- 페이지 내에서 딱 하나만 선택하고 싶을 때 사용
+		ex) h1#target , #target , 등
+	클래스 선택자 : 
+		- 모든 태그에는 class라는 속성을 부여할 수 있으며, 중복하여 부여가 가능하고, 여러 개 부여 가능
+		- 페이지 내에서 원하는 그룹을 만들어 선택하고 싶을 때 사용
+		- 태그의 종류가 달라도 묶어서 디자인을 적용할 수 있다.
+		ex) h1[class=test], h1.test , .test , 등
+	연계 선택자 : 
+		- 특정 태그를 기준으로 하여 경로를 탐색하여 태그를 선택하는 방법
+*/
+
 /*
 	디자인을 1개의 태그에 적용시키는 훈련보다는 레이아웃을 구현하는 요령에 대해서 고민해본다!
 	
@@ -226,4 +247,91 @@ textarea.form-input {
 .form-btn.form-btn-negative {
 	background-color: rgb(202, 36, 49);
 	color:white;
+}
+
+/*
+	Pagination 스타일
+*/
+.pagination > a {
+	color:grey;
+	text-decoration: none;
+	display:inline-block; 
+	min-width:35px;
+	
+	border:1px solid transparent;
+	padding:0.5rem;
+	text-align: center;
+}
+.pagination > a:hover,
+.pagination > a.on {
+	border:1px solid lightgray;
+	color:rgb(255,85,146);
+}
+
+.pagination-list {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+}
+.pagination-list > li {
+	display: inline-block;
+	min-width: 35px;
+	
+	border:1px solid transparent;
+	padding:0.5rem;
+	text-align:center;
+	cursor: pointer;
+}
+.pagination-list > li > a {
+	color:gray;
+	text-decoration: none;
+}
+.pagination-list > li:hover,
+.pagination-list > li.on {
+	border:1px solid lightgray;
+}
+.pagination-list > li:hover > a,
+.pagination-list > li.on > a {
+	color:rgb(255,85,146);
+}
+
+
+/*
+	float 스타일(다단 레이아웃)
+	가상선택자(Virtual Selector)
+	- 존재하지 않는 영역을 만들어서 사용할 수 있도록 지원하는 선택자
+	- ::before 는 해당 영역의 시작지점을 말한다
+	- ::after는 해당 영역의 종료지점을 말한다
+	
+	1. 존재하지 않는 영역이므로 존재하도록 만드는 것이 첫 번째로 수행해야 하는 작업
+		- content : 영역에 글자를 작성할 수 있다.
+	2. display를 block으로 설정해서 한 줄을 차지하도록 설정
+	3. 영역이 한 줄에 걸쳐서 생성되었으므로, 해당 영역에 clear 설정
+*/
+.float-container::after {
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.float-container > .left {
+	float:left;
+}
+.float-container > .right {
+	float:right;
+}
+
+/*
+	링크 태그를 버튼처럼 보이게 변경
+*/
+.link-btn {
+	display: inline-block;
+	padding:0.75rem;
+	border:1px solid lightgray;
+	text-decoration: none;
+	color:gray;	
+}
+.link-btn:hover{
+	border-color:black;
+	color:black;	
 }
