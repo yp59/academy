@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>자바스크립트의 내장객체</title>
 	<script>
-		/*
+	/*
 			Javascript는 브라우저상의 기능을 구현하기 위한 언어이다.
 			= 브라우저를 제어하거나 정보를 얻어낼 수 있어야 한다
 			
@@ -21,6 +22,12 @@
 				- back() : 뒤로 1페이지 이동(가능할 경우에만)
 				- go() : 특정 위치로 이동(가능할 경우에만)
 				- forward() : 앞으로 1페이지 이동(가능할 경우에만)
+			document : 문서를 제어하는 내장객체
+				- getElementById() : 아이디로 태그를 선택(단수)
+				- getElementsByClassName() : 클래스로 태그들을 선택(복수)
+				- getElementsByTagName() : 태그명으로 태그들을 선택(복수)
+				- querySelector() : CSS 선택자로 태그를 선택(단수)
+				- querySelectorAll() : CSS 선택자로 태그들을 선택(복수)
 		*/
 		
 		console.log(window);
@@ -97,26 +104,27 @@
 // 			textarea.style.color = "red";//style 요소 중에서 color를 설정(그나마 권장)
 // 			자바스크립트에서 클래스를 확인/추가/제거할 수 있다(권장)
 		}
+		
 		function documentTest2(){
 			var textarea = document.querySelector(".test2");
-		//	textarea.Style.text-align = "left";//style을 직접수정(비추천)
-		//	console.log(textarea.classList);
-		textarea.classList.remove("left","center","right");
-		textarea.classList.add("left");
+// 			textarea.style.textAlign = "left";//style을 직접 수정(비추천)
+// 			console.log(textarea.classList);
+// 			textarea.classList.remove("left");
+// 			textarea.classList.remove("center");
+// 			textarea.classList.remove("right");
+			textarea.classList.remove("left", "center", "right");
+			textarea.classList.add("left");//textarea의 class관리도구를 이용해 left를 추가
 		}
 		function documentTest3(){
 			var textarea = document.querySelector(".test2");
-			textarea.classList.remove("left","center","right");
+			textarea.classList.remove("left", "center", "right");
 			textarea.classList.add("center");
-			
 		}
 		function documentTest4(){
 			var textarea = document.querySelector(".test2");
-			textarea.classList.remove("left","center","right");
+			textarea.classList.remove("left", "center", "right");
 			textarea.classList.add("right");
-			
 		}
-		
 	</script>
 	<style>
 		.left{
