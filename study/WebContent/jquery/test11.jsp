@@ -28,14 +28,16 @@
 				var price = $(this).data("price");//data- 전용 명령
 				
 				var total = parseInt(count) * parseInt(price);
-				$(".res").text(total);
+				//$(".res").text(total);
+				$(this).next("span").text(total);
 			});
 		});
 	</script>
 </head>
 <body test>
 	
-	수량 : <input type="number" class="qty" data-price="15000"> 총 <span class="res">0</span>원
+	수량 : <input type="number" class="qty" data-price="15000"> 총 <span>0</span>원
 	
 </body>
 </html>
+

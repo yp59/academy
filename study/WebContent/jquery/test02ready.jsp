@@ -3,27 +3,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>jquery</title>
-<link rel="stylesheet" type="text/css"href="<%=request.getContextPath()%>/design/common.css">
-<!-- 개발할 때는 uncompressed 버전 개발 후 배포 시에는 compressed(minify)버전을 사용 -->
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-<script>
-//jquery는 자바스크립트를 개량한 라이브러리
-//코드 스타일이 유사하다.
-window.addEventListener("load", function() {
+	<meta charset="UTF-8">
+	<title>jQuery</title>
 	
-});
-//jquery는 자바 스크립트 뿐 아니라 불러온 jquery 라이브러리도 사용할 준비가 끝나야 한다.
-//jquery에서 제공하는 이벤트 중에 ready라는 이벤트 시점이 되어야 사용하는데 문제가 없다.
-$(document).ready(function(){
-	console.log("jquery준비완료");//$로 jquery표현 가능 
-});
-$(function(){
-	console.log("jqyery 준비 완 ");
-});//이걸로 쓴다
-</script>
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/design/common.css">
+	<style>
+	
+	</style>
+	
+<!-- 	개발할 때는 uncompressed 버전, 개발 후 배포시에는 compressed(minify) 버전을 사용 -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<!-- 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+	<script>
+		//jQuery는 Javascript를 개량한 라이브러리
+		//= 코드 스타일이 유사하다
+		
+		//자바스크립트는 window에 load이벤트 시점만 되어도 사용하는데 문제가 없다.
+		window.addEventListener("load", function(){
+			
+		});
+		
+		//jQuery는 자바스크립트 뿐 아니라 불러온 jQuery 라이브러리도 사용할 준비가 끝나야 한다.
+		//= jQuery에서 제공하는 이벤트 중에 ready라는 이벤트 시점이 되어야 사용하는데 문제가 없다.
+		//= jQuery는 모든 구문이 "대상을 선택"하면서부터 시작하게 된다.
+		//= jQuery라고 매번 쓰기는 너무 기니까 jQuery 대신 $라는 별칭을 사용하도록 되어 있다.
+		//= 최초에는 무조건 문서(document)가 준비되어야 하므로 굳이 사용하지 않아도 자동 작성해준다.
+		//jQuery(window).on("load", function(){
+		//jQuery(document).on("ready", function(){
+		//jQuery(document).ready(function(){
+		//$(document).ready(function(){
+		//$().ready(function(){
+		$(function(){
+			console.log("jQuery 준비 완료!");
+		});
+	</script>
 </head>
 <body>
 

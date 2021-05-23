@@ -15,29 +15,29 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <!-- 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 	<script>
+// 		목표 : 모든 h1 태그의 글자색을 빨강으로 설정
+	
+// 		자바스크립트로 구현하면...
+// 		window.addEventListener("load", function(){
+// 			var h1 = document.querySelectorAll("h1");
+// 			for(var i=0; i < h1.length ; i++){
+// 				h1[i].style.color = "red";
+// 			}
+// 		});
+	
+// 		jQuery로 구현하면..
 		$(function(){
-			//목표 : 버튼을 누르면 알림창을 출력
-			
-			//자바스크립트 구현
-			document.querySelector(".test-btn").addEventListener("click", function(){
-				window.alert("잘했어요(자바스크립트)");
-			});
-		
-			//jQuery 구현
-			//$(".test-btn").on("click", function(){});
-			$(".test-btn").click(function(){
-				window.alert("잘했어요(jQuery)");
-			});
-			
-			$(".test-btn").click(function(){
-				window.alert("잘했엉")
-			});
+			$(".row").css("color", "red");
 		});
 	</script>
 </head>
 <body>
-	
-	<button class="test-btn">눌러보세요!</button>
-	
+	<div class ="row">
+	<h1>Hello jQuery!</h1>
+	<h1>Hello jQuery!</h1>
+	<h1>Hello jQuery!</h1>
+	<h1>Hello jQuery!</h1>
+	<h1>Hello jQuery!</h1>
+	</div>
 </body>
 </html>

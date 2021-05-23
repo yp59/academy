@@ -24,11 +24,23 @@
 			$(".blue-btn").click(function(){
 				$(".target").css("color", "blue");
 			});
-			
+			var color = 1;
+			$(".color-btn").click(function(){
+				
+				if(color===1){
+				$(".target").css("color","red");
+				color=0;
+				}
+				else{
+				$(".target").css("color","blue");
+				color=1;
+				}
+			});
 		});
 	</script>
 </head>
 <body>
+<button class="color-btn">색상반전</button>
 	<button class="red-btn">빨강</button>
 	<button class="blue-btn">파랑</button>
 	<hr>

@@ -16,28 +16,19 @@
 <!-- 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 	<script>
 		$(function(){
-			//목표 : 버튼을 누르면 알림창을 출력
-			
-			//자바스크립트 구현
-			document.querySelector(".test-btn").addEventListener("click", function(){
-				window.alert("잘했어요(자바스크립트)");
-			});
 		
-			//jQuery 구현
-			//$(".test-btn").on("click", function(){});
-			$(".test-btn").click(function(){
-				window.alert("잘했어요(jQuery)");
-			});
-			
-			$(".test-btn").click(function(){
-				window.alert("잘했엉")
+			$(".test-input").on("input",function(){
+				var copy = $(this).val();
+				
+				$(".copy-area1").html(copy);
+				$(".copy-area2").text(copy);
 			});
 		});
 	</script>
 </head>
 <body>
-	
-	<button class="test-btn">눌러보세요!</button>
-	
+	<textarea class="test-input"></textarea>
+	<div class="copy-area1"></div>
+	<div class="copy-area2"></div>
 </body>
 </html>

@@ -15,29 +15,24 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <!-- 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 	<script>
+		//property는 기본적으로 제공되는 속성만 읽을 수 있다.
+		//attribute는 작성된 글자를 읽을 수 있다.
 		$(function(){
-			//목표 : 버튼을 누르면 알림창을 출력
-			
-			//자바스크립트 구현
-			document.querySelector(".test-btn").addEventListener("click", function(){
-				window.alert("잘했어요(자바스크립트)");
-			});
-		
-			//jQuery 구현
-			//$(".test-btn").on("click", function(){});
-			$(".test-btn").click(function(){
-				window.alert("잘했어요(jQuery)");
-			});
-			
-			$(".test-btn").click(function(){
-				window.alert("잘했엉")
+			$(".qty").on("input",function(){
+				var num = $(this).val();
+				var price = $(this).data("price");
+				
+				var total = num*price;
+				
+				$(this).next("span").text(total);
 			});
 		});
 	</script>
 </head>
-<body>
+<body test>
 	
-	<button class="test-btn">눌러보세요!</button>
+	수량 : <input type="number" class="qty" data-price="15000"> 총 <span>0</span>원
 	
 </body>
 </html>
+

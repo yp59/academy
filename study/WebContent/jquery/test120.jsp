@@ -16,28 +16,27 @@
 <!-- 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 	<script>
 		$(function(){
-			//목표 : 버튼을 누르면 알림창을 출력
-			
-			//자바스크립트 구현
-			document.querySelector(".test-btn").addEventListener("click", function(){
-				window.alert("잘했어요(자바스크립트)");
-			});
-		
-			//jQuery 구현
-			//$(".test-btn").on("click", function(){});
-			$(".test-btn").click(function(){
-				window.alert("잘했어요(jQuery)");
-			});
-			
-			$(".test-btn").click(function(){
-				window.alert("잘했엉")
-			});
-		});
+ 			$.each($("h1"),function(index,item){
+ 				if(index%2!=0){//index 길이는 0부터 java랑 같다 (sql은 index 1부터)
+ 					
+ 					$(this).css("color","red");
+ 					
+ 				}else{
+ 					
+ 					$(this).css("color","blue");
+ 				}
+ 				
+ 			});
+		});	
 	</script>
 </head>
 <body>
-	
-	<button class="test-btn">눌러보세요!</button>
-	
+	<div class = "row">
+	<h1>Hello jQuery!</h1>
+	<h1>Hello jQuery!</h1>
+	<h1>Hello jQuery!</h1>
+	<h1>Hello jQuery!</h1>
+	<h1>Hello jQuery!</h1>
+	</div>
 </body>
 </html>
