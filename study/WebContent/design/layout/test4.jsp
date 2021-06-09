@@ -28,25 +28,22 @@
 		}
 		aside {
 			float:left;
-			width:20%;
+			width:40%;
 			min-height:500px;
 		}
 		section {
 			float:left;
-			width:80%;
+			width:60%;
 			min-height:500px;
 		}
 		
 		header {
-			min-height: 100px;
+			min-height: 200px;
 		}
 		article {
 			min-height:300px;
-		}
-		footer {
-			min-height:100px;
-		}
-	</style>
+		}	
+		</style>
 </head>
 <body>
 	<!-- 
@@ -75,7 +72,6 @@
 		<section>
 			<header></header>
 			<article></article>
-			<footer></footer>
 		</section>
 		
 	</main>

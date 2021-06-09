@@ -5,18 +5,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title>이미지 확대/축소</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	
 	<script>
 		//전달된 width, height로 크기를 설정하는 함수
-		function setSize(width, height){
+		/*
+		function setSize(width,height){
+			
 			var banner = document.querySelector(".banner");
-			banner.width = width;
-			banner.height = height;
+			
+			banner.width=width;
+			banner.height=height;
 		}
+	
 		function changeSize(){
 			var input = document.querySelector(".size-input");
+			
 			var size = input.value;
-			setSize(size, size);
+			setSize(size,size);
 		}
+	*/
+	
+		
 	</script>
 </head>
 <body>

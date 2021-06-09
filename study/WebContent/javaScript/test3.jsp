@@ -13,9 +13,9 @@
 		var a = 10;//int a = 10;
 		var b = "hello";//String b = "hello";
 		
-		console.log(a);
-		console.log(b);
-		console.log(a + b);
+		console.log(a);//10
+		console.log(b);//hello
+		console.log(a + b);//10hello
 		console.log(a * b);//NaN : Not a Number. 숫자가 아니다.
 		console.log(typeof a);//a의 실제 관리형태를 알려달라!
 		console.log(typeof b);//b의 실제 관리형태를 달려달라!

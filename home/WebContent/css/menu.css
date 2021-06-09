@@ -29,10 +29,7 @@
 	position: relative;
 }
 .menu ul {
-	display:none; 
-	position:absolute;
-	left:0;
-	top:53px; 
+	
 }
 .menu li:hover > ul {
 	display:block;

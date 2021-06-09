@@ -8,7 +8,7 @@
 	<script>
 	//목표 입력이 발생하면 글자수를 갱신하는페이지 구현
 	//<input>에 oninput상황이 발생하면 준비한 함수를 실행
-	
+	/*
 	function calc(){
 		var input = document.querySelector("#user-input");
 		var span = document.querySelector("#length");
@@ -21,6 +21,13 @@
 		//span.value=len;
 		span.textContent=len;
 	}
+	*/
+	$("#user-input").on("input",function(){
+		
+		var x = document.querySelector("#length");
+		console.log(x);
+		
+	});
 	
 	</script>
 </head>

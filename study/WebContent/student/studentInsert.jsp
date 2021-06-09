@@ -12,7 +12,7 @@
 	<br><br>
 	이메일 <input type="text" name="studentEmail" required>
 	<br><br>
-	프로필 사진 : <input type="file" name="studentProfile" accept=".png, .jpg, .gif">
+	프로필 사진 : <input type="file" name="studentProfile" accept=".png, .jpg, .gif,.pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
 	<br><br>
 	<input type="submit" value="등록">	 
 

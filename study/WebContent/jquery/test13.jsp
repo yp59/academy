@@ -28,7 +28,7 @@
 					//console.log($(this).is(":checked"));
 					if($(this).is(":checked")){
 						//console.log($(this).next().text());
-						//console.log($(this).val());
+					//	console.log($(this).val());
 						text += $(this).val();
 						text += "\n";
 					}

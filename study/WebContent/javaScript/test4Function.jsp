@@ -13,7 +13,7 @@
 function test(){
 	console.log("테스트");
 }
-test();
+
 </script>
 </head>
 <body>

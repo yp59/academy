@@ -41,7 +41,7 @@ public class studentInsertServlet extends HttpServlet{
 		
 //		String path = "C:/Users/user1";
 		String path = "D:/upload";
-		int maximumSize = 10 * 1024 * 1024;
+		int maximumSize = 100 * 1024 * 1024;
 		String encoding = "UTF-8";
 		DefaultFileRenamePolicy policy = new DefaultFileRenamePolicy();
 		

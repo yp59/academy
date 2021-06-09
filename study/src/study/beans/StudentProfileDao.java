@@ -12,7 +12,7 @@ public class StudentProfileDao {
 		Connection con = JdbcUtils.getConnection(USERNAME, PASSWORD);
 		
 		
-		String sql = "insert into student_profile values(student_profile_seq.nextval, ?, ?, ?, ?, ?)";
+		String sql = "insert into student_profile2 values(student_profile_seq.nextval, ?, ?, ?, ?, ?)";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, studentprofiledto.getProfileUploadName());
 		ps.setString(2, studentprofiledto.getProfileSaveName());
@@ -28,7 +28,7 @@ public class StudentProfileDao {
 		public StudentProfileDto getByProfileNo(int profileNo) throws Exception {
 			Connection con = JdbcUtils.getConnection(USERNAME, PASSWORD);
 			
-			String sql = "select * from student_profile where profile_no = ?";
+			String sql = "select * from student_profile2 where profile_no = ?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, profileNo);
 			ResultSet rs = ps.executeQuery();
@@ -55,7 +55,7 @@ public class StudentProfileDao {
 			Connection con = JdbcUtils.getConnection(USERNAME, PASSWORD);
 
 			
-			String sql = "select * from student_profile where profile_origin = ?";
+			String sql = "select * from student_profile2 where profile_origin = ?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, profileOrigin);
 			ResultSet rs = ps.executeQuery();

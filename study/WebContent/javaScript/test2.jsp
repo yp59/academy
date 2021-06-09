@@ -11,7 +11,7 @@
 //여러개의 script가 있어도 순서대로 코드가 실행된다.
 //ES5는 매우 유연한 문법을 제공한다.(따옴표 종류 무관, 세미콜론 여부 무관)
 console.log("hello javaScript");
-console.log("hello javaScript2");
+console.log("hello javaScript2");//콘솔로하면 콘솔창에 log가 나온다.
 </script>
 </head>
 <body>
