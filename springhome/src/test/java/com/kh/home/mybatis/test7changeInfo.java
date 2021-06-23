@@ -37,6 +37,7 @@ public class test7changeInfo {
 	MemberDto memberDto =new MemberDto();
 	@Before
 	public void before() {
+
 		memberDto=MemberDto.builder()
 				.memberNo(4)
 				.memberPw("admin0002")
