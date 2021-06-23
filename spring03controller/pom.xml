@@ -6,7 +6,6 @@ xmlns - XML NameSpace 문서에 필요한 참조 주소
 xmlns:xsi - Xml Schema Instance 인증서 주소
 xmlns:schemaLocation - 실제 사용 가능한 태그에 대한 정보 참조 주소
 
-
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
@@ -26,8 +25,8 @@ xmlns:schemaLocation - 실제 사용 가능한 태그에 대한 정보 참조 �
 	
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.kh</groupId>
-	<artifactId>spring02</artifactId>
-	<name>spring02</name>
+	<artifactId>spring03</artifactId>
+	<name>spring03controller</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	
