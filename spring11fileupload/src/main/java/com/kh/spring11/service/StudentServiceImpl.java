@@ -39,7 +39,7 @@ public class StudentServiceImpl implements StudentService {
 		if(!studentVO.getStudentProfile().isEmpty()) {
 			//3. 학생 프로필 파일 등록(파일이 있을 경우에만)
 			// = 파일 이름을 학생 번호로 설정(파일이 1개이기 때문)
-			File dir = new File("D:/upload/student");
+			File dir = new File("/Users/yp59/upload");
 			dir.mkdirs();//폴더 생성 명령
 			String fileName = String.valueOf(studentNo);//
 			File target = new File(dir, fileName);

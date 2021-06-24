@@ -54,7 +54,7 @@ public class FileDownloadController {
 		response.setHeader("Content-Disposition", "attachment; filename=\""+URLEncoder.encode(studentProfileDto.getProfileUploadName(), "UTF-8")+"\"");
 		
 //		3. 파일을 불러와서 사용자에게 전송
-		File target = new File("D:/upload/student", studentProfileDto.getProfileSaveName());
+		File target = new File("/Users/yp59/upload", studentProfileDto.getProfileSaveName());
 		byte[] data = FileUtils.readFileToByteArray(target);
 		response.getOutputStream().write(data);
 	}
@@ -69,7 +69,7 @@ public class FileDownloadController {
 			return ResponseEntity.notFound().build();
 		}
 		
-		File target = new File("D:/upload/student", studentProfileDto.getProfileSaveName());
+		File target = new File("/Users/yp59/upload", studentProfileDto.getProfileSaveName());
 		byte[] data = FileUtils.readFileToByteArray(target);
 		ByteArrayResource resource = new ByteArrayResource(data);
 		
@@ -90,7 +90,7 @@ public class FileDownloadController {
 			return ResponseEntity.notFound().build();
 		}
 		
-		File target = new File("D:/upload/student", studentProfileDto.getProfileSaveName());
+		File target = new File("/Users/yp59/upload", studentProfileDto.getProfileSaveName());
 		byte[] data = FileUtils.readFileToByteArray(target);
 		ByteArrayResource resource = new ByteArrayResource(data);
 		

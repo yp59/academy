@@ -57,6 +57,7 @@ public class MemberController {
 		MemberDto find = memberDao.login(memberDto);
 		if(find != null) {//성공
 			//세션에 memberNo라는 이름으로 회원번호를 추가
+			
 			session.setAttribute("memberNo", find.getMemberNo());
 			return "redirect:/";
 		}
