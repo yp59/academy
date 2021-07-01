@@ -1,61 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- maven에서 제공하는 프로젝트 설정 파일
-project 라는 태그를 통해 현재 프로젝트에 필요한 내용들을 설정
-xmlns - XML NameSpace 문서에 필요한 참조 주소 
-xmlns:xsi - Xml Schema Instance 인증서 주소
-xmlns:schemaLocation - 실제 사용 가능한 태그에 대한 정보 참조 주소
+<!-- 
+	maven에서 제공하는 프로젝트 설정 파일
+	= project라는 태그를 통해 현재 프로젝트에 필요한 내용들을 설정
+	= xmlns - XML NameSpace. 문서에 필요한 정보 참조 주소
+	= xmlns:xsi - Xml Schema Instance. 인증서 주소
+	= xmlns:schemaLocation - 실제 사용 가능한 태그에 대한 정보 참조 주소
+ -->
 
--->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
-	<!-- 
-	현재 프로젝트에 대한 정보 설정
-	modelVersion : maven에서 사용할 프로젝트 관리 모델 버전(4.0.0 고정)
-	groupId : 소유자를 식별할 수 있는 식별값 ex) com.kh.spring01 ->com.kh부분
-	artifactId: 애플리케이션을 식별할 수 있는 식별값 ex) com.kh.spring01 -> spring01 부분
-	name: 애플리케이션 명칭(프로젝트명, context-path)
-	packaging : 배포 형태(jar,|war|,ear)
-	version : 현재 애플리케이션의 버전(x,y,z)
-	x: 메이저버전
-	y: 마이너버전	
-	z: release 버전 (오류 개선, 안정화 작업)
-	1.0.0 부터는 배포 버전으로 간주(정식 출시가 되었다고 판단)
-	-->
 	
+	<!-- 
+		현재 프로젝트에 대한 정보 설정
+		= modelVersion : Maven에서 사용할 프로젝트 관리 모델 버전(4.0.0 고정)
+		= groupId : 소유자를 식별할 수 있는 식별값
+		= artifactId : 애플리케이션을 식별할 수 있는 식별값
+		= name : 애플리케이션 명칭(프로젝트명, context-path)
+		= packaging : 배포 형태(jar, war, ear)
+		= version : 현재 애플리케이션의 버전(x.y.z)
+			= x.y.z일 때 x가 major , y가 minor , z가 release 버전을 의미
+			= 1.0.0부터는 배포 버전으로 간주(정식 출시가 되었다고 판단)
+	 -->
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>여기</groupId>
-	<artifactId>이름</artifactId>
-	<name>바꿔야함</name>
+	<groupId>com.kh</groupId>
+	<artifactId>spring19</artifactId>
+	<name>spring19websocket</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	
 	<!-- 
-	properties 현재 문서에서 사용할 변수를 태그 형태로 선언
-	사용은 EL형태로 한다.${변수명}
+		Properties : 현재 문서에서 사용할 변수를 태그 형태로 선언
+		= 사용은 EL 형태로 한다. ${변수명}
 	 -->
 	<properties>
-	<!-- 자바버전 설정 -->
+	
+		<!-- 자바 버전 -->
 		<java-version>1.8</java-version>
 		
 		<!-- 스프링 프레임워크 버전 -->
 		<org.springframework-version>5.3.8</org.springframework-version>
-		<!-- AspectJ -->
+		
+		<!-- 기타 의존성 버전 -->
 		<org.aspectj-version>1.9.6</org.aspectj-version>
 		<org.slf4j-version>1.7.30</org.slf4j-version>
+		
 	</properties>
-	<!-- 
-	dependencies : 프로젝트에서 사용할 의존성 정보
-	사용할 의존성 정보를 지정된 태그 형식에 맞게 작성
 	
-	dependency : 의존성 1개를 감싸는 태그
-	-groupId : 소유자 식별값
-	artifactId : 애플리케이션 식별값
-	version
-	scope(생략가능) : 사용시기
-	exclusions(생략가능) : 
+	<!-- 
+		Dependencies : 프로젝트에서 사용할 의존성 정보
+		= 사용할 의존성 정보를 지정된 태그 형식에 맞게 작성
+		
+		- dependency : 의존성 1개를 감싸는 태그
+			- groupId : 소유자 식별값
+			- artifactId : 애플리케이션 식별값
+			- version : 버전
+			- scope(생략가능) : 로드 시점(사용 시기)
+			- exclusions(생략가능) : 배제시킬 대상(상황)
 	 -->
-<dependencies>
+	<dependencies>
 	
 		<!-- Spring -->
 		<dependency>
@@ -263,9 +266,8 @@ xmlns:schemaLocation - 실제 사용 가능한 태그에 대한 정보 참조 �
 		    <artifactId>jackson-databind</artifactId>
 		    <version>2.12.3</version>
 		</dependency>
-		 
-		 
-	  <!-- 
+		   
+		   <!-- 
 		   웹소켓 라이브러리
 		    -->
 		   
@@ -273,14 +275,15 @@ xmlns:schemaLocation - 실제 사용 가능한 태그에 대한 정보 참조 �
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-websocket</artifactId>
 		    <version>${org.springframework-version}</version>
-		</dependency> 	 
-		 
+		</dependency> 
+		   
 	</dependencies>
+	
 	<!-- 
-	build : 프로젝트 빌드 설정
-	Plugin을 추가하여 다양한 형태로 빌드가 가능
-	=jar,war,ear 등 
-	-->
+		Build : 프로젝트 빌드 설정
+		= Plugin을 추가하여 다양한 형태로 빌드가 가능
+		= jar, war, ear 등
+	 -->
     <build>
         <plugins>
             <plugin>
