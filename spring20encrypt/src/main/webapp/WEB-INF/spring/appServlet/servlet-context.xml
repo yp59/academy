@@ -14,9 +14,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:websocket="http://www.springframework.org/schema/websocket"
-	xsi:schemaLocation="http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket-4.3.xsd
-		http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 	
@@ -26,7 +24,7 @@
 		= 스캐닝의 기준점이 될 위치를 설정
 		= spring-context 에서 지원하는 기능을 사용
 	 -->
-	<context:component-scan base-package="com.kh.spring19" use-default-filters="false">
+	<context:component-scan base-package="com.kh.spring20" use-default-filters="false">
 		<!-- 컨트롤러만 등록하겠다(@Controller) -->
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
@@ -51,31 +49,5 @@
 	-->
 	<annotation-driven/>
 	<resources location="/resources/" mapping="/res/**"></resources>
-	
-	<!-- 
-	 웹소켓 서버를 등록하고 접속 주소를 설정
-	 웹소켓 서버는 spring bean으로 등록해야 한다.
-	 -->
-	
-	
-	<beans:bean id ="basicServer" class = "com.kh.spring19.ws.WebSocketBasicServer"></beans:bean>
-	<beans:bean id ="memberServer" class = "com.kh.spring19.ws.WebSocketBasicServer"></beans:bean>
-	<websocket:handlers>
-	<!-- 
-	basicServer를 다음 주소에 할당한다
-	=ws://localhost:8080/spring19/basic
-	 -->
-	 <websocket:mapping handler="basicServer" path="/basic"/>
-	 
-	 <!-- 
-	 memberServer를 다음 주소에 할당한다.
-	 ws://localhost:8080/spring19/member
-	  -->
-	  <websocket:mapping handler="memberServer" path="/member"/>
-	  <websocket:handshake-interceptors>
-	  <beans:bean class = "org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor"></beans:bean>
-	  </websocket:handshake-interceptors>
-	</websocket:handlers>
-	
 	
 </beans:beans>

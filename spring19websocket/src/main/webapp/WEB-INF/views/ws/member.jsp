@@ -1,15 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+    
 <jsp:include page="/WEB-INF/views/template/header.jsp"></jsp:include>
 
-<h1>BasicServer 연결 예제</h1>
+<h1>MemberServer 연결 예제</h1>
 
 <button id="connect">연결</button>
 <button id="disconnect">종료</button>
 
 <input type="text" id="user-input">
 <button id="send">전송</button>
+
+<hr>
 
 <!-- 메세지 출력 영역 -->
 <div id="message-area"></div>
@@ -21,7 +23,7 @@
 		//= Javascript에 내장된 WebSocket API 를 사용
 		
 		$("#connect").click(function(){
-			var uri = "ws://localhost:8080/spring19/basic";
+			var uri = "ws://localhost:8080/spring19/member";
 			window.socket = new WebSocket(uri);
 			
 			//생성 이후에 할 일(코드)들을 예약작업으로 설정 - callback 함수 설정
@@ -48,8 +50,18 @@
 				//console.log(arguments);
 				//console.log(arguments[0].data);
 				//console.log(message.data);
-				var tag = $("<p>").text(message.data);
+				//console.log(typeof message.data);
+				
+				var messageObject = JSON.parse(message.data);//String --> JSON Object
+				console.log(messageObject);
+				
+				var user = $("<span>").css("font-size", "1.3rem").text("["+messageObject.memberNick+"]");
+				var content = $("<span>").text(messageObject.message);
+				var tag = $("<div>");
+				
+				tag.append(user).append(content);
 				$("#message-area").append(tag);
+				
 				$("#user-input").val("");
 			};
 		});
